@@ -1,0 +1,19 @@
+{% extends "::layout.html.twig" %}
+ 
+ 
+{% block body %}
+ 	<div class="body">
+		<div class="header">
+			<div class="identity">
+				[[storage.content.header.identity]]
+			</div>
+			<div class="qualification">
+				[[storage.content.header.qualification]]
+			</div>
+		</div>
+
+	  {% block site_body %}
+	  {% endblock %}
+  </div>
+ 
+{% endblock %}

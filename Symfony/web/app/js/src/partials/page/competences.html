@@ -1,0 +1,17 @@
+
+<div class="page page-competences" ng-class="{display: loaded==true}">
+	<h1>{{location.menu.title}}</h1>
+	<div class="category" ng-repeat="category in competences.order">
+		<div class="title">
+			{{competences.all[category].title}}
+		</div>
+		<ul class="competences">
+			<li class="competence" ng-repeat="(competence,level) in competences.all[category].data">
+					<div class="level">
+						<div class="inner-bar" data-level="{{levels[category][competence]}}"></div>
+					</div>
+					<div class="label" title="{{competences.all[category].infos[competence]}}">{{competence}}</div>
+			</li>
+		</div>
+	</div>
+</div>

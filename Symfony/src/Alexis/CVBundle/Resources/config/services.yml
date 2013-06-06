@@ -1,0 +1,7 @@
+parameters:
+#    alexis_cv.example.class: Alexis\CVBundle\Example
+
+services:
+#    alexis_cv.example:
+#        class: %alexis_cv.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

@@ -1,0 +1,23 @@
+*#
+sails/node_modules
+sails/npm-debug.log
+sails/ssl
+sails/.DS_STORE
+sails/*~
+sails/.idea
+
+sails/nbproject
+
+# Ignore temporary files
+sails/.tmp
+
+sails/*.swo
+sails/*.swp
+sails/*.swn
+sails/*.swm
+Symfony/web/bundles/
+Symfony/app/bootstrap*
+Symfony/app/cache/*
+Symfony/app/logs/*
+Symfony/vendor/
+Symfony/app/config/parameters.yml

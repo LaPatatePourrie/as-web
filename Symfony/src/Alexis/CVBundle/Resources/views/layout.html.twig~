@@ -1,0 +1,13 @@
+{% extends "::layout.html.twig" %}
+ 
+ 
+{% block body %}
+ 
+  <h1>Mon site perso</h1>
+ 
+  <hr>
+ 
+  {% block site_body %}
+  {% endblock %}
+ 
+{% endblock %}

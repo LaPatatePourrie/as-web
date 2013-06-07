@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html ng-app="app" ng-controller="MainCtrl">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ 
+    <title>{{meta.title}}</title>
+    <link rel="stylesheet/less" type="text/css" href="app/css/main.less">
+    
+  </head>
+ 
+  <body>
+
+    <div id="wrapper">
+
+      <div class="wrapper wrapper-leftbar" ng-include src="'app/js/src/partials/layout/leftbar.html'"></div>
+      
+      <div class="wrapper wrapper-content">
+        <div class="body">
+          <div class="header">
+            <div ng-show="location.page=='accueil'" class="photo">
+              <img ng-src="app/img/divers/alexis1.png" alt="Alexis Serres"/>
+            </div>
+            <div class="identity">
+              Alexis Serres
+            </div>
+            <div class="qualification">
+              <strong>Développeur </strong> PHP/MySQL et Javascript
+              <br/>
+              <strong> Intégrateur </strong> HTML5/CSS3
+            </div>
+          </div>
+
+          <div ng-view></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="app/js/libs/less/less.min.js"></script>
+    <script src="app/js/libs/angular/angular.min.js,angular-resource.min.js"></script>
+    <script src="app/js/src/storage.js,app.js,router.js,controllers.js,services.js,directives.js"></script>
+  </body>
+</html>

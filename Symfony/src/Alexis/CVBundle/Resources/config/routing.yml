@@ -1,0 +1,6 @@
+alexis_cv_homepage:
+    pattern:  /home/
+    defaults: { _controller: AlexisCVBundle:Default:index }
+alexis_cv_contact:
+    pattern:  /contact/
+    defaults: { _controller: AlexisCVBundle:Default:contact }

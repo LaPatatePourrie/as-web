@@ -1,0 +1,58 @@
+
+<div class="page page-references" ng-class="{display: loaded==true}">
+	<h1>{{location.menu.title}}</h1>
+	<div class="reference" ng-class="{display: references.all[r].loaded==true, reference: true}" ng-repeat="r in references.order">
+		
+
+		<div class="arrow" ng-click="toggleSlide(r)">
+			<img class="default" ng-src="{{getArrow(r)}}" alt="Voir plus"/>
+			<img class="hover" ng-src="{{getArrow(r, true)}}" alt="Voir plus"/>
+		</div>
+
+		<div class="slider">
+			<div class="inner-slider" data-slide="{{slides[r]}}">
+				<div class="slide slide-default">
+					<div class="img" ng-show="references.all[r].img">
+						<a target="blank" href="http://{{references.all[r].lien}}"><img ng-src="{{rootPath}}/img/references/{{references.all[r].img}}" alt="{{references.all[r].title}}"></a>
+					</div>
+
+					<div class="body">
+						<div class="title">
+							{{references.all[r].title}}
+						</div>
+						<div class="contenu">
+							<div class="context">{{references.all[r].context}}</div>
+							<div class="description">{{references.all[r].description}}</div>
+							<div class="lien" ng-show="references.all[r].lien">
+								<a ng-show="references.all[r].lien" target="blank" href="http://{{references.all[r].lien}}">{{references.all[r].lien}}</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="slide slide-competences">
+					<div class="competences">
+						<div class="bloc technologies">
+							<div class="title">Technologies:</div>
+							<ul>
+								<li class="techno" ng-repeat="techno in references.all[r].competences.technologies">
+									{{techno}}
+								</li>
+							</ul>
+						</div>
+						<div class="bloc problematiques">
+							<div class="title">Probl&eacute;matiques:</div>
+							<ul>
+								<li class="problematique" ng-repeat="problematique in references.all[r].competences.problematiques">
+									{{problematique}}
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="separator"></div>
+
+	</div>
+</div>

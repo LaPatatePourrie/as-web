@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html ng-app="app" ng-controller="MainCtrl">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ 
+    <title>[[meta.title]]</title>
+    <link rel="stylesheet/less" type="text/css" href="{{ asset('css/main.less') }}">
+    <link href='http://fonts.googleapis.com/css?family=Roboto Slab:400,700italic,700,400italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Noto Sans:400,700italic,700,400italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Merriweather Sans:400,700italic,700,400italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700italic,700,400italic' rel='stylesheet' type='text/css'>
+    
+  </head>
+ 
+  <body>
+
+    <div id="wrapper">
+
+      <div class="wrapper wrapper-leftbar" ng-include='"{{ asset('js/app/partials/leftbar.html') }}"'></div>
+      <div class="wrapper wrapper-content">
+        {% block body %}
+        {% endblock %}
+      </div>
+    </div>
+
+    <script src="{{ asset('js/libs/less.min.js') }}"></script>
+    <script src="{{ asset('js/libs/angular/angular.min.js') }}"></script>
+    <script src="{{ asset('js/libs/angular/angular-resource.min.js') }}"></script>
+    <script src="{{ asset('js/app/storage.js') }}"></script>
+    <script src="{{ asset('js/app/app.js') }}"></script>
+    <script src="{{ asset('js/app/router.js') }}"></script>
+    <script src="{{ asset('js/app/controllers.js') }}"></script>
+    <script src="{{ asset('js/app/services.js') }}"></script>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,19 @@
+<div id="logo">
+  <a href="/#accueil">{{storage.content.logoTitle}}</a>
+</div>
+
+<div id="menu">
+	<ul>
+		<li ng-repeat="menu in menus.order">
+			<a ng-class="{current: location.page==menu}" href="#/{{menu}}">{{menus.all[menu].title}}</a>
+		</li>
+	</ul>
+</div>
+
+<div id="contact">
+	<div class="title"><a href="#/contact">Contact</a></div>
+	<ul class="infos">
+		<li>Email: <email/></li>
+		<li>T&eacute;l: {{storage.contact.tel}}</li>
+	</ul>
+</div>
